@@ -27,15 +27,15 @@ interface ApiService {
         @Field ("password") password: String
     ) : Call<DefaultResponse>
 
-    @POST ("updateuser.php/{id}")
+    @POST("updateuser.php")
     @FormUrlEncoded
     fun updateUser(
-        @Field ("id") id: Int,
-        @Field ("username") username: String,
-        @Field ("complete_name") complete_name: String,
-        @Field ("address") address: String,
-        @Field ("dateOfBirth") dateOfBirth: String,
-    )
+        @Field("id")id : String,
+        @Field("username")username : String,
+        @Field("complete_name")completename : String,
+        @Field("dateofbirth")dateofbirth : String,
+        @Field("address")address : String
+    ): Call<DefaultResponse>
 
 
     @GET ("apiuser.php")

@@ -6,7 +6,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-
     const val BASE_URL = "https://apiexample.surelabsid.com/"
 
     private val logging : HttpLoggingInterceptor
@@ -26,4 +25,5 @@ object RetrofitClient {
             .build()
         retrofit.create(ApiService::class.java)
     }
+
 }
